@@ -19,7 +19,7 @@ export function ComputerView({ currentFile, fileContent, setFileContent }: Compu
     <div className="h-full flex flex-col">
       <div className="p-4 border-b flex items-center justify-between">
         <div>
-          <h2 className="text-lg font-medium">Manus Pro's Computer</h2>
+          <h2 className="text-lg font-medium">Computador do Dill CSI</h2>
           <div className="flex items-center gap-2 text-sm text-gray-500 mt-1">
             <span className="bg-gray-100 px-2 py-0.5 rounded">Editor</span>
             <span>{currentFile}</span>
@@ -86,7 +86,7 @@ export function ComputerView({ currentFile, fileContent, setFileContent }: Compu
 
           <div className={`flex items-center gap-1 ${isLive ? "text-green-500" : "text-gray-500"}`}>
             <div className={`w-2 h-2 rounded-full ${isLive ? "bg-green-500" : "bg-gray-500"}`}></div>
-            <span className="text-xs">live</span>
+            <span className="text-xs">ao vivo</span>
           </div>
         </div>
 

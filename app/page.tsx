@@ -37,21 +37,21 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-gray-50">
       <div className="absolute top-4 left-4 flex items-center gap-2">
         <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-          <Image src="/placeholder.svg?height=32&width=32" alt="Manus Logo" width={24} height={24} />
+          <Image src="/placeholder.svg?height=32&width=32" alt="Dill CSI Logo" width={24} height={24} />
         </div>
-        <span className="text-gray-700 font-medium">manus pro</span>
+        <span className="text-gray-700 font-medium">Dill CSI</span>
       </div>
 
       <div className="w-full max-w-2xl text-center mb-8">
-        <h1 className="text-4xl font-medium text-gray-700 mb-2">Hello I'm manus pro.</h1>
-        <p className="text-2xl text-gray-400">What can I do for you?</p>
+        <h1 className="text-4xl font-medium text-gray-700 mb-2">Olá, eu sou Dill CSI.</h1>
+        <p className="text-2xl text-gray-400">O que posso fazer por você?</p>
       </div>
 
       <form onSubmit={handleSubmit} className="w-full max-w-2xl">
         <div className="relative">
           <Input
             className="pr-24 py-6 text-base bg-white shadow-sm"
-            placeholder="Give Maus pro a task to work on..."
+            placeholder="Dê uma tarefa para Dill CSI trabalhar..."
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
           />
@@ -65,7 +65,7 @@ export default function Home() {
               onClick={triggerFileInput}
             >
               <Paperclip className="h-4 w-4 mr-1" />
-              Attach
+              Anexar
             </Button>
 
             <input type="file" ref={fileInputRef} className="hidden" multiple onChange={handleFileChange} />
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="flex items-center gap-2 text-gray-400 text-sm">
               <span className="flex items-center gap-1">
                 <div className="w-4 h-4 rounded border border-gray-300"></div>
-                Standard
+                Padrão
               </span>
               <Button type="submit" size="icon" variant="ghost" className="rounded-full bg-gray-100 hover:bg-gray-200">
                 <ArrowUp className="h-4 w-4" />

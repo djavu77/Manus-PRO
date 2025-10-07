@@ -16,72 +16,72 @@ export function DashboardContent({ activeTask, commandOutput }: DashboardContent
   const [activities, setActivities] = useState([
     {
       id: 1,
-      text: "Starting to extract and analyze resumes for RL algorithm engineer candidates.",
-      command: "mkdir -p resumes && unzip -o upload/resumes_1_to_10.zip -d resumes",
+      text: "Iniciando extração e análise de currículos para candidatos a engenheiro de algoritmos de RL.",
+      command: "mkdir -p curriculos && unzip -o upload/curriculos_1_a_10.zip -d curriculos",
       status: "completed",
       type: "command",
     },
     {
       id: 2,
-      text: "Creating a todo list to track resume analysis progress.",
+      text: "Criando lista de tarefas para acompanhar progresso da análise de currículos.",
       status: "completed",
       type: "file",
       filename: "todo.md",
     },
     {
       id: 3,
-      text: "Create candidate review task list",
+      text: "Criar lista de tarefas de revisão de candidatos",
       status: "completed",
       type: "task",
     },
     {
       id: 4,
-      text: "Starting to read and analyze each resume, focusing on RL expertise and project experience.",
+      text: "Começando a ler e analisar cada currículo, focando em expertise em RL e experiência em projetos.",
       status: "completed",
       type: "browse",
-      path: "file:///home/ubuntu/resumes/resume_1.pdf",
+      path: "file:///home/ubuntu/curriculos/curriculo_1.pdf",
     },
     {
       id: 5,
-      text: "Read and analyze individual resumes",
+      text: "Ler e analisar currículos individuais",
       status: "in-progress",
       type: "task",
     },
     {
       id: 6,
-      text: "Continuing to read and analyze resumes, focusing on RL expertise and project experience.",
+      text: "Continuando a ler e analisar currículos, focando em expertise em RL e experiência em projetos.",
       status: "in-progress",
       type: "view",
     },
     {
       id: 7,
-      text: "Continuing to read and analyze resumes, troubleshooting PDF viewing issues.",
+      text: "Continuando a ler e analisar currículos, solucionando problemas de visualização de PDF.",
       status: "in-progress",
       type: "scroll",
     },
     {
       id: 8,
-      text: "Analyzing resume content for candidate 1, focusing on RL-related experience.",
+      text: "Analisando conteúdo do currículo para candidato 1, focando em experiência relacionada a RL.",
       status: "in-progress",
       type: "scroll-top",
     },
     {
       id: 9,
-      text: "Analyzing resume content for candidate 1 (Amelia Martin), focusing on RL-related experience.",
+      text: "Analisando conteúdo do currículo para candidato 1 (Amélia Martins), focando em experiência relacionada a RL.",
       status: "in-progress",
       type: "file",
-      filename: "candidate_profiles/amelia_martin.md",
+      filename: "perfis_candidatos/amelia_martins.md",
     },
     {
       id: 10,
-      text: "Continuing to analyze remaining resumes, focusing on RL expertise and project experience.",
+      text: "Continuando a analisar currículos restantes, focando em expertise em RL e experiência em projetos.",
       status: "in-progress",
       type: "edit",
       filename: "todo.md",
     },
     {
       id: 11,
-      text: "Continuing to analyze remaining resumes, focusing on RL expertise and project experience.",
+      text: "Continuando a analisar currículos restantes, focando em expertise em RL e experiência em projetos.",
       status: "thinking",
       type: "thinking",
     },
@@ -132,7 +132,7 @@ export function DashboardContent({ activeTask, commandOutput }: DashboardContent
         <div className="flex items-center gap-2">
           <Button variant="outline" size="sm">
             <FileText className="h-4 w-4 mr-1" />
-            Export
+            Exportar
           </Button>
         </div>
       </div>
@@ -152,49 +152,49 @@ export function DashboardContent({ activeTask, commandOutput }: DashboardContent
             {activity.type === "file" && (
               <div className="bg-gray-100 p-2 rounded text-xs font-mono flex items-center gap-2">
                 <FileText className="h-4 w-4 text-gray-500" />
-                <span>Creating file {activity.filename}</span>
+                <span>Criando arquivo {activity.filename}</span>
               </div>
             )}
 
             {activity.type === "browse" && (
               <div className="bg-gray-100 p-2 rounded text-xs font-mono flex items-center gap-2">
                 <Eye className="h-4 w-4 text-gray-500" />
-                <span>Browsing {activity.path}</span>
+                <span>Navegando {activity.path}</span>
               </div>
             )}
 
             {activity.type === "view" && (
               <div className="bg-gray-100 p-2 rounded text-xs font-mono flex items-center gap-2">
                 <Eye className="h-4 w-4 text-gray-500" />
-                <span>Viewing the page</span>
+                <span>Visualizando a página</span>
               </div>
             )}
 
             {activity.type === "scroll" && (
               <div className="bg-gray-100 p-2 rounded text-xs font-mono flex items-center gap-2">
                 <ArrowDown className="h-4 w-4 text-gray-500" />
-                <span>Scrolling down</span>
+                <span>Rolando para baixo</span>
               </div>
             )}
 
             {activity.type === "scroll-top" && (
               <div className="bg-gray-100 p-2 rounded text-xs font-mono flex items-center gap-2">
                 <ArrowUp className="h-4 w-4 text-gray-500" />
-                <span>Scrolling to top</span>
+                <span>Rolando para o topo</span>
               </div>
             )}
 
             {activity.type === "edit" && (
               <div className="bg-gray-100 p-2 rounded text-xs font-mono flex items-center gap-2">
                 <Edit className="h-4 w-4 text-gray-500" />
-                <span>Editing file {activity.filename}</span>
+                <span>Editando arquivo {activity.filename}</span>
               </div>
             )}
 
             {activity.type === "thinking" && (
               <div className="flex items-center gap-2 text-blue-500">
                 <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                <span>Thinking</span>
+                <span>Pensando</span>
               </div>
             )}
 
@@ -210,7 +210,7 @@ export function DashboardContent({ activeTask, commandOutput }: DashboardContent
       <div className="border-t p-4 bg-white">
         <form onSubmit={handleSendMessage} className="flex items-center gap-2">
           <Input
-            placeholder="Message Manus"
+            placeholder="Mensagem para Dill CSI"
             className="flex-1"
             value={message}
             onChange={(e) => setMessage(e.target.value)}

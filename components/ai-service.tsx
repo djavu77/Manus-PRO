@@ -21,12 +21,12 @@ export function AIService({ prompt, onResult }: AIServiceProps) {
       const { text } = await generateText({
         model: openai("gpt-4o"),
         prompt: prompt,
-        system: "You are Manus, an AI assistant that helps with productivity tasks.",
+        system: "Você é Dill CSI, um assistente de IA que ajuda com tarefas de produtividade.",
       })
 
       onResult(text)
     } catch (err) {
-      setError("Failed to generate response. Please try again.")
+      setError("Falha ao gerar resposta. Por favor, tente novamente.")
       console.error(err)
     } finally {
       setIsLoading(false)
@@ -35,7 +35,7 @@ export function AIService({ prompt, onResult }: AIServiceProps) {
 
   return (
     <div>
-      {isLoading && <div className="text-sm text-blue-500">Thinking...</div>}
+      {isLoading && <div className="text-sm text-blue-500">Pensando...</div>}
       {error && <div className="text-sm text-red-500">{error}</div>}
     </div>
   )
